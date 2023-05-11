@@ -29,9 +29,11 @@ int main(int argc, char*argv[])
 				if (numRead == -1)
 					exit(1);
 				// EoF
-				if (numRead == 0)
-					break;
+				if (numRead == 0){
+						break;
+					}
 				//STDOUT_FILENO == 1 == 표준 출력
+				// 부모 프로세스에서 작성한 값을 받아서 표준 출력에 작성
 				if (write(STDOUT_FILENO, buf, numRead) != numRead)
 					exit(1);
 			}
