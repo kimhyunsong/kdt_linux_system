@@ -1,8 +1,8 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -g
-SRC = pipe.c
+SRC = popen_glob.c
 OBJ = $(SRC:.c=.o)
-TARGET = pipe
+TARGET = popen_glob
 
 all: $(TARGET)
 $(TARGET) : $(OBJ)
